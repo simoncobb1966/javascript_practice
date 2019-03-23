@@ -12,16 +12,22 @@ const {
 } = require("../challenges/week1");
 
 describe("capitalize", () => {
-  test("returns a capitalized string", () => {
+  test.only("returns a capitalized string", () => {
     expect(capitalize("hello")).toBe("Hello");
   });
+    test.only("returns capitalized string", () => {
+      expect(capitalize("hello world")).toBe("Hello World");
+  });
+  test.only("returns capitalized string", () => {
+    expect(capitalize("Hello everyone")).toBe("Hello everyone");
+});
 
-  test("does nothing if the string is already capitalized", () => {
+  test.only("does nothing if the string is already capitalized", () => {
     expect(capitalize("Hello")).toBe("Hello");
   });
 
-  test("capitalizes the first character if the string is a sentence", () => {
-    expect(capitalize("the quick fox")).toBe("The quick fox");
+  test.only("capitalizes the first character if the string is a sentence", () => {
+    expect(capitalize("the quick fox.")).toBe("The quick fox.");
   });
 });
 

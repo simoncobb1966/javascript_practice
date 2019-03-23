@@ -17,7 +17,7 @@ a.forEach (function(elem) {
 b = b + t
 })
 // removes the " " at the end of the last word
-let c = b.substring(0, b.length-1)
+let c = b.slice(0, b.length-1)
 return c
 }
 

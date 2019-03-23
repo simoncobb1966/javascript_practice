@@ -38,37 +38,37 @@ describe("generateInitials", () => {
 });
 
 describe("addVAT", () => {
-  test("adds a VAT of 20% to a price of 100", () => {
+  xtest("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
 
-  test("adds a VAT of 17.5% to a price of 40", () => {
+  xtest("adds a VAT of 17.5% to a price of 40", () => {
     expect(addVAT(40, 17.5)).toBe(47);
   });
 
-  test("adds a VAT of 17.5% to a price of 33.50", () => {
+  xtest("adds a VAT of 17.5% to a price of 33.50", () => {
     expect(addVAT(33.5, 17.5)).toBe(39.36);
   });
 
-  test("adds a VAT of 0% to a price of 25", () => {
+  xtest("adds a VAT of 0% to a price of 25", () => {
     expect(addVAT(25, 0)).toBe(25);
   });
 });
 
 describe("getSalePrice", () => {
-  xtest("reduces a price of 100 by 50%", () => {
+  test("reduces a price of 100 by 50%", () => {
     expect(getSalePrice(100, 50)).toBe(50);
   });
 
-  xtest("reduces a price of 100 by 33.3%", () => {
+  test("reduces a price of 100 by 33.3%", () => {
     expect(getSalePrice(100, 33.3)).toBe(66.7);
   });
 
-  xtest("reduces a price of 79.99 by 15%", () => {
+  test("reduces a price of 79.99 by 15%", () => {
     expect(getSalePrice(79.99, 15)).toBe(67.99);
   });
 
-  xtest("reduces a price of 50 by 0%", () => {
+  test("reduces a price of 50 by 0%", () => {
     expect(getSalePrice(50, 0)).toBe(0);
   });
 });

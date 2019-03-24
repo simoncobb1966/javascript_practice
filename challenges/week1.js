@@ -60,7 +60,6 @@ function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
   // Add your code here!
-  if (reduction === 0){return 0}
   var a
   a = originalPrice - (originalPrice * (reduction/100))
   a = parseFloat(a).toFixed(2)
@@ -71,12 +70,23 @@ function getSalePrice(originalPrice, reduction) {
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
   // Add your code here!
+  let a = Math.floor(str.length/2)
+  if (str.length%2===1) {return str.slice(a,a+1)}
+  return str.slice(a-1,a+1)
 }
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
+  var a = ""
+  var i
+  for (i = word.length; i > -1; i--) {
+    a=a+(word.slice(i-1,i))
+  }
+  return a
 }
+
+
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");

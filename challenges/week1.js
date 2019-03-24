@@ -107,6 +107,13 @@ return b
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   // Add your code here!
+  let count = 0
+  users.forEach(function(elem) {
+    if (elem.type === "Linux" ) {
+      count = count + 1
+    }
+  })
+  return count
 }
 
 function getMeanScore(scores) {

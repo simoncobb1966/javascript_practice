@@ -84,7 +84,7 @@ describe("getMiddleCharacter", () => {
 });
 
 describe("reverseWord", () => {
-  test("returns the provided word, reversed", () => {
+  xtest("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
 

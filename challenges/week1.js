@@ -124,12 +124,17 @@ let total = 0
 total = total + elem
 })
 return Math.round(((total / scores.length) + 0.00001) * 100) / 100
-// Math.round((num + 0.00001) * 100) / 100
 }
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
+  var answer = ""
+  if (!(n%3)){answer = "fizz"} 
+  if (!(n%5)){answer = answer + "buzz"} 
+  if (answer===""){answer = n}
+  return answer
+
 }
 
 module.exports = {

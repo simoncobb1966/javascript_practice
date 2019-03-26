@@ -109,9 +109,8 @@ function countLinuxUsers(users) {
   // Add your code here!
   let count = 0
   users.forEach(function(elem) {
-    if (elem.type === "Linux" ) {
-      count = count + 1
-    }
+      count = count + (elem.type === "Linux" )
+    
   })
   return count
 }

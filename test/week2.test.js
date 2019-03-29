@@ -46,7 +46,7 @@ describe("isFromManchester", () => {
 
 describe("getBusNumbers", () => {
   // A bus can hold 40 people. This function should return how many buses are required for the number of people
-  test.only("returns 1 if all the people fit in 1 bus", () => {
+  test("returns 1 if all the people fit in 1 bus", () => {
     expect(getBusNumbers(1)).toBe(1);
     expect(getBusNumbers(10)).toBe(1);
     expect(getBusNumbers(25)).toBe(1);

@@ -19,11 +19,17 @@ function getBusNumbers(people) {
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
   // Your code here!
+  var count = 0
+  arr.forEach(function(elem){
+count = count + (elem === "sheep")
+  })
+  return count
 }
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
+  return (person.address.postCode.charAt(0) === "M" && person.address.city === "Manchester")
 }
 
 module.exports = {

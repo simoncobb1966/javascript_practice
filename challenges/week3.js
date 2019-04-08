@@ -25,18 +25,38 @@ function camelCaseWords(words) {
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   // Your code here!
+  var count = 0
+  people.forEach(function(elem){
+count=count+elem.subjects.length 
+  })
+  return count
 }
 
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
+  var flag = 0
+  menu.forEach(function(elem){
+  flag = flag + (elem.ingredients.indexOf(ingredient) > -1)
+  })
+  return (flag>0)
 }
 
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
   // Your code here!
+  newArray = []
+arr1.forEach(function(elem1){
+  arr2.forEach(function(elem2){
+    if ((elem1 === elem2) && (newArray.indexOf(elem1) === -1)) {
+      newArray.push(elem1)
+    }
+  })
+})
+newArray.sort()
+return newArray
 }
 
 module.exports = {

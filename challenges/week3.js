@@ -1,11 +1,25 @@
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here!
+newArray = []
+nums.forEach(function(elem){
+newArray.push(elem*elem)
+})
+nums = newArray
+return nums
 }
 
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
   // Your code here!
+    //1st deal with first letter of first word
+    var result = ""
+    result = words[0].charAt(0).toLowerCase() + (words[0].slice(1))
+    //2nd deal with remaining words
+    for (let i = 1; i < words.length; i++) {
+    result = result + words[i].charAt(0).toUpperCase() + (words[i].slice(1))
+    }
+    return result
 }
 
 function getTotalSubjects(people) {
